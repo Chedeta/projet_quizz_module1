@@ -25,6 +25,9 @@ list_question = questions_alea(4, len(questions))
 compteur_bonne = 0
 compteur_fausse = 0   
 t0 = time.time()
+print("--------------------------------------------")
+print("BIENVENUE DANS CE QUIZ SUR LES DATA SCIENCES")
+print("--------------------------------------------\n")
 for i in range(0, len(list_question)):
     if len(list_question)-1 == 1:
         stri = "question"
