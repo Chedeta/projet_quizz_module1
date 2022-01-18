@@ -71,14 +71,12 @@ classement = pd.read_csv("rank.csv")
 
 classement_sorted = classement.sort_values(["pct_rep", "pct_temps"], ascending = (False, True))
 
-for index, row in classement_sorted.iterrows():
-    if row['Pseudo'] == pseudo:
-        previous_pourcentage_bonne_rep = row['pct_rep']
-        previous_pourcentage_temps = row['pct_temps']
-        index = index
-        break 
+arr_classement = pd.unique(classement_sorted['Pseudo'])
+list_classement = arr_classement.tolist()
 
-print('Vous êtes désormais classé n°',index)
+rang_final = list_classement.index(pseudo)
+
+print('Vous êtes désormais classé n°',rang_final + 1)
         
 
 
