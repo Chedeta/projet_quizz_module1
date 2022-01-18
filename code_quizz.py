@@ -59,7 +59,7 @@ total = t1-t0
 pourcentage_bonne_rep = (compteur_bonne/(compteur_bonne+compteur_fausse))*100
 pourcentage_temps = round(total,2)/nbre_questions
 
-print("Vous avez eu", pourcentage_bonne_rep, "% de bonnes réponses en" , round(total,2),"secondes, soit,", pourcentage_temps, "secondes / question.")
+print("Vous avez eu", pourcentage_bonne_rep, "% de bonnes réponses en" , round(total,2),"secondes, soit,", round(pourcentage_temps,2), "secondes / question.")
 
 rank = pd.DataFrame({'Pseudo': [pseudo],
                     'pct_rep': [pourcentage_bonne_rep],
@@ -76,7 +76,7 @@ list_classement = arr_classement.tolist()
 
 rang_final = list_classement.index(pseudo)
 
-print('Vous êtes désormais classé n°',rang_final + 1)
+print('Vous êtes classé n°',rang_final + 1)
         
 
 
