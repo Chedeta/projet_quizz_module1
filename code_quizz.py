@@ -24,10 +24,9 @@ def questions_alea(nbre_questions, taille):
 # %%
 
 #Init. BDD des questions
-questions = pd.read_csv(r"C:\Users\Jean\Documents\Projets python\
-                        Jedha QUIZZ\QCM.csv") 
+questions = pd.read_csv(r"C:\Users\Jean\Documents\Projets python\Jedha QUIZZ\QCM.csv") 
 #Choix du nombre de questions à poser + tirage des questions via questions_alea
-nbre_questions = 4
+nbre_questions = 5
 list_question = questions_alea(nbre_questions, len(questions))
 #Init. des variables et du temps
 compteur_bonne = 0
@@ -96,7 +95,7 @@ list_classement = arr_classement.tolist()
 #Rang final correspondant à la position dans la liste
 rang_final = list_classement.index(pseudo) + 1
 
-print('Vous êtes classé n°',rang_final)
+print('Vous êtes classé n°' + str(rang_final))
         
 
 
